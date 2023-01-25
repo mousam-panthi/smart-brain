@@ -63,7 +63,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://smart-brain-api-7626.onrender.com/imageurl', {
+      fetch('https://easy-plum-cygnet-ring.cyclic.app/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -73,7 +73,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((result) => {
         if(result) {
-          fetch('https://smart-brain-api-7626.onrender.com/image', {
+          fetch('https://easy-plum-cygnet-ring.cyclic.app/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
